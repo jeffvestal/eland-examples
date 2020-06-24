@@ -5,8 +5,29 @@
 
 
 # 06.2020 - Jeff Vestal @ Elastic
+# version 1.1
+
 # Created with v7.8 of elasticsearch
+# eland repo https://github.com/elastic/eland
 # Model Training borrowed from - https://chrisalbon.com/machine_learning/trees_and_forests/random_forest_classifier_example/
+
+
+# In[ ]:
+
+
+# Set elasticsearch cluster url and creds from .env file
+
+import os
+from dotenv import load_dotenv
+load_dotenv()
+es_url=os.getenv('ES_URL')
+es_user=os.getenv('ES_USER')
+es_pass=os.getenv('ES_PASS')
+
+
+# In[ ]:
+
+
 
 # Load the library with the iris dataset
 from sklearn.datasets import load_iris
@@ -188,9 +209,7 @@ from pprint import pprint
 
 
 # create es connection
-# need to put in user : pass creds
-# Es URL
-es = Elasticsearch('https://<ES_URL>:9243', http_auth=('<USERNAME>', '<PASSWORD>'))
+es = Elasticsearch(es_url, http_auth=(es_user,es_pass))
 
 
 # In[ ]:
