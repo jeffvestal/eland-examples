@@ -1,8 +1,8 @@
 # Operationalizing External Supervised Models with Eland and Elastic Search
 
-elastic.co|https://elastic.co
+[elastic.co](https://www.elastic.co)
 
-eland repo - https://github.com/elastic/eland
+[eland repo](https://github.com/elastic/eland)
 
 This demo shows you how to create a Random Forest Classifier machine learning model outside of elasticsearch with python, load it into elasticsearch, then operationalize it with ingest pipelines.
 
